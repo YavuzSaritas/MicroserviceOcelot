@@ -17,7 +17,7 @@ namespace CostumerAPI.Controllers
         }
 
         [HttpGet("getcustomers")]
-        public async Task<IActionResult> CustomerList()
+        public IActionResult CustomerList()
         {
             var customers = _configuration.GetSection("CustomerList")?.Value;
 
@@ -29,9 +29,9 @@ namespace CostumerAPI.Controllers
         }
 
         [HttpGet("status")]
-        public async Task<IActionResult> Status()
+        public IActionResult Status()
         {
-            return Ok("Product API Run!");
+            return Ok("Customer API Run!");
         }
     }
 }
