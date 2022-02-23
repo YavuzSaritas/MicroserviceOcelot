@@ -17,7 +17,7 @@ namespace ProductAPI.Controllers
             _configuration = configuration;
         }
 
-        [HttpGet("getproduct")]
+        [HttpGet("getproducts")]
         public async Task<IActionResult> ProductList()
         {
             var products = _configuration.GetSection("ProductList")?.Value;
