@@ -3,7 +3,7 @@
 dotnet add package Ocelot
 
 # Gateway Endpoints
-![alt text](https://prnt.sc/LXBcmneZEdz7)
+![Test Image 1](https://prnt.sc/LXBcmneZEdz7)
 ```python
 
 (https://prnt.sc/LXBcmneZEdz7)https://localhost:5003/api/gateway/customer/getcustomers  navigated to https://localhost:5002/api/customer/getcustomers
