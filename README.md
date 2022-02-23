@@ -10,5 +10,5 @@ https://localhost:5003/api/gateway/customer/getcustomers  'navigated to' https:/
 ```
 image : https://prnt.sc/IBf95bwbeE3L
 ```python
-https://localhost:5003/api/gateway/product/getproducts    navigated to https://localhost:5001/api/product/getproducts
+https://localhost:5003/api/gateway/product/getproducts  'navigated to' https://localhost:5001/api/product/getproducts
 ```
