@@ -1,0 +1,42 @@
+﻿{
+  /*API Configuration*/
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/product/{routename}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/gateway/product/{routename}", /* routename : getproducts */
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/customer/{routename}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/gateway/customer/{routename}", /* routename : getcustomers */
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ],
+
+  /*Ocelot 5004 portunda alışacak şekilde ayarlandı*/
+  "Routes": [],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5004"
+  }
+}
+/*
+ DownstreamPathTemplate : Yönlendirme yapılacak microservice’in route’unu tutmaktadır.
+ DownstreamScheme : İlgili microservice’e yapılacak isteğin hangi protokol üzerinden gerçekleştirileceğini bildirmektedir.
+ DownstreamHostAndPorts : Microservice’in ‘Host’ ve ‘Port’ bilgilerini tutmaktadır.
+ UpstreamPathTemplate : API Gateway üzerinden microservice’e yapılacak yönlendirmenin route’unu tutmaktadır.
+ UpstreamHttpMethod : Hangi isteklerin yapılabileceği bildirilmektedir.
+*/

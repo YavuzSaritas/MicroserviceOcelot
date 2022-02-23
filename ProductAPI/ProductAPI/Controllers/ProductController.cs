@@ -18,7 +18,7 @@ namespace ProductAPI.Controllers
         }
 
         [HttpGet("getproducts")]
-        public async Task<IActionResult> ProductList()
+        public IActionResult ProductList()
         {
             var products = _configuration.GetSection("ProductList")?.Value;
 
@@ -29,7 +29,7 @@ namespace ProductAPI.Controllers
             return Ok(productList);
         }
         [HttpGet("status")]
-        public async Task<IActionResult> Status()
+        public IActionResult Status()
         {
             return Ok("Product API Run!");
         }
